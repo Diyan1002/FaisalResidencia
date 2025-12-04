@@ -1,0 +1,13 @@
+/* Import any font you like for the step numbers */
+@import url("https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap");
+
+.booking-number {
+  font-family: "DM Serif Display", system-ui, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", sans-serif;
+}
+/* Brown / Golden icon color */
+.brown-icon {
+  filter: brightness(0) saturate(100%)
+    invert(42%) sepia(70%) saturate(600%)
+    hue-rotate(10deg) brightness(90%) contrast(90%);
+}
