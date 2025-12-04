@@ -7,7 +7,12 @@ export default function SocietyBanner() {
       <img 
         src={banner} 
         alt="Faisal Residencia E-17 Islamabad" 
-        className="w-full object-cover"
+        className="
+          w-full 
+          object-contain    
+          sm:h-auto        
+          sm:object-cover   
+        "
       />
     </div>
   );
