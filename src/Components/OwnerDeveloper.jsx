@@ -1,9 +1,16 @@
 import React from "react";
+import { motion } from "framer-motion";
 import ownerImg from "../assets/Owner.png"; // replace with correct image path
 
 export default function FaisalResidencia() {
   return (
-    <section className="w-full py-12 px-4 max-w-7xl mx-auto">
+    <motion.section
+      initial={{ opacity: 0, y: -80 }}           // ✅ upar se start
+      whileInView={{ opacity: 1, y: 0 }}         // ✅ viewport mein aate hi niche apni jagah pe
+      viewport={{ once: true, amount: 0.2 }}     // ✅ sirf 1 dafa, 20% section dikhte hi
+      transition={{ duration: 1, ease: "easeOut" }}
+      className="w-full py-12 px-4 max-w-7xl mx-auto"
+    >
       {/* TITLE */}
       <h2 className="text-center text-2xl md:text-3xl font-bold text-[#8b6f32] mb-6">
         Faisal Residencia Owner and Developer
@@ -60,8 +67,14 @@ export default function FaisalResidencia() {
         </div>
       </div>
 
-      {/* FIRST ROW */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 mt-12">
+      {/* FIRST ROW — SCROLL PAR SEPARATE ANIMATION */}
+      <motion.div
+        className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 mt-12"
+        initial={{ opacity: 0, y: 40 }}               // ✅ neeche se halka sa
+        whileInView={{ opacity: 1, y: 0 }}            // ✅ apni jagah par aa jaye
+        viewport={{ once: true, amount: 0.3 }}        // ✅ jab ye row viewport mein aaye
+        transition={{ duration: 0.6, ease: "easeOut" }}
+      >
         {/* CARD 1 */}
         <div className="p-6 sm:border-r border-[#8b6f32]">
           <h3 className="text-lg font-bold font-poppins text-[#a88843] mb-3">Faisal Town Phase 1</h3>
@@ -95,7 +108,7 @@ export default function FaisalResidencia() {
           </p>
         </div>
 
-        {/* ✅ CARD 4 — SIRF IS KE BAAD MOBILE LINE */}
+        {/* CARD 4 */}
         <div className="p-6">
           <h3 className="text-lg font-bold font-poppins text-[#a88843] mb-3">Faisal Margalla City</h3>
           <p className="text-gray-700 text-sm md:text-base font-poppins leading-relaxed text-justify">
@@ -104,13 +117,19 @@ export default function FaisalResidencia() {
             an amazing living environment. Its strategic location enhances connectivity to major urban centers.
           </p>
         </div>
-      </div>
+      </motion.div>
 
-      {/* ✅ ✅ ✅ SIRF EK HI LINE — MOBILE ONLY */}
+      {/* MOBILE ONLY LINE */}
       <div className="w-full h-[1px] bg-[#8b6f32] my-6 block sm:hidden"></div>
 
-      {/* SECOND ROW */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 mt-12">
+      {/* SECOND ROW — THODI SI AUR DELAY SE ANIMATE */}
+      <motion.div
+        className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 mt-12"
+        initial={{ opacity: 0, y: 40 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, amount: 0.3 }}
+        transition={{ duration: 0.6, ease: "easeOut", delay: 0.1 }}
+      >
         {/* CARD 5 */}
         <div className="p-6 sm:border-r border-[#8b6f32]">
           <h3 className="text-lg font-bold font-poppins text-[#a88843] mb-3">Faisal Heights</h3>
@@ -151,7 +170,7 @@ export default function FaisalResidencia() {
             residential and commercial zones.
           </p>
         </div>
-      </div>
-    </section>
+      </motion.div>
+    </motion.section>
   );
 }

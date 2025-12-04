@@ -1,4 +1,5 @@
 import React from "react";
+import { motion } from "framer-motion";
 import nearbyImg from "../assets/Resi.png"; // 👈 path/image name adjust karein
 
 const FaisalNearbyLandmarks = () => {
@@ -74,7 +75,13 @@ const FaisalNearbyLandmarks = () => {
   const secondRow = infoBlocks.slice(4);
 
   return (
-    <section className="w-full bg-[#e5e1d5] py-16">
+    <motion.section
+      initial={{ opacity: 0, x: 100 }}           // ✅ right se start
+      whileInView={{ opacity: 1, x: 0 }}         // ✅ apni jagah pe aa jaye
+      viewport={{ once: true, amount: 0.2 }}     // ✅ sirf 1 dafa animate
+      transition={{ duration: 1, ease: "easeOut" }}
+      className="w-full bg-[#e5e1d5] py-16"
+    >
       <div className="max-w-6xl mx-auto px-4 -mt-14 lg:px-0">
         {/* Heading */}
         <h2 className="text-center text-3xl md:text-4xl font-semibold text-[#8b6f32] mb-4">
@@ -93,8 +100,14 @@ const FaisalNearbyLandmarks = () => {
           Among the notable attractions and landmarks near the society are:
         </p>
 
-        {/* Content row */}
-        <div className="flex flex-col lg:flex-row ml-0 lg:ml-8 items-start gap-8">
+        {/* Content row (list + image) */}
+        <motion.div
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.3 }}
+          transition={{ duration: 0.6, ease: "easeOut" }}
+          className="flex flex-col lg:flex-row ml-0 lg:ml-8 items-start gap-8"
+        >
           {/* Left: bullet list */}
           <ul className="flex-1 space-y-2">
             {points.map((item, index) => (
@@ -118,10 +131,16 @@ const FaisalNearbyLandmarks = () => {
               />
             </div>
           </div>
-        </div>
+        </motion.div>
 
-        {/* FIRST ROW — 4 COLUMNS */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 mt-12">
+        {/* FIRST ROW — 4 COLUMNS (left → right) */}
+        <motion.div
+          initial={{ opacity: 0, x: -60 }}           // ✅ left se start
+          whileInView={{ opacity: 1, x: 0 }}         // ✅ left → right
+          viewport={{ once: true, amount: 0.3 }}
+          transition={{ duration: 0.6, ease: "easeOut", delay: 0.05 }}
+          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 mt-12"
+        >
           {firstRow.map((item, index) => (
             <div
               key={index}
@@ -139,10 +158,16 @@ const FaisalNearbyLandmarks = () => {
               </p>
             </div>
           ))}
-        </div>
+        </motion.div>
 
-        {/* SECOND ROW — 4 COLUMNS */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 mt-4">
+        {/* SECOND ROW — 4 COLUMNS (left → right) */}
+        <motion.div
+          initial={{ opacity: 0, x: -60 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true, amount: 0.3 }}
+          transition={{ duration: 0.6, ease: "easeOut", delay: 0.08 }}
+          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 mt-4"
+        >
           {secondRow.map((item, index) => (
             <div
               key={index}
@@ -160,10 +185,16 @@ const FaisalNearbyLandmarks = () => {
               </p>
             </div>
           ))}
-        </div>
+        </motion.div>
 
-        {/* THIRD ROW — 4 COLUMNS */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 mt-4">
+        {/* THIRD ROW — 4 COLUMNS (left → right) */}
+        <motion.div
+          initial={{ opacity: 0, x: -60 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true, amount: 0.3 }}
+          transition={{ duration: 0.6, ease: "easeOut", delay: 0.11 }}
+          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 mt-4"
+        >
           {thirdRow.map((item, index) => (
             <div
               key={index}
@@ -181,9 +212,9 @@ const FaisalNearbyLandmarks = () => {
               </p>
             </div>
           ))}
-        </div>
+        </motion.div>
       </div>
-    </section>
+    </motion.section>
   );
 };
 

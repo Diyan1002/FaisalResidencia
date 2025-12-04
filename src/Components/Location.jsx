@@ -1,9 +1,16 @@
 import React from "react";
+import { motion } from "framer-motion";
 import MapImg from "../assets/Location.png"; // make sure this path is correct
 
 export default function FaisalResidenciaLocation() {
   return (
-    <div className="w-full bg-[#e5e1d5] py-12 px-6 md:px-16">
+    <motion.div
+      initial={{ opacity: 0, x: -80 }}             // ✅ left se start
+      whileInView={{ opacity: 1, x: 0 }}           // ✅ apni jagah pe aa jaye
+      viewport={{ once: true, amount: 0.2 }}       // ✅ sirf 1 dafa animate, 20% dikhte hi
+      transition={{ duration: 1, ease: "easeOut" }}
+      className="w-full bg-[#e5e1d5] py-12 px-6 md:px-16"
+    >
       {/* --- Top Section (Image + Text) --- */}
       <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-10 items-start">
         {/* 🟡 TEXT FIRST ON MOBILE, RIGHT SIDE ON DESKTOP */}
@@ -41,7 +48,13 @@ export default function FaisalResidenciaLocation() {
       </div>
 
       {/* --- Map Section --- */}
-      <div className="mt-16 text-center">
+      <motion.div
+        initial={{ opacity: 0, x: -60 }}              // ✅ thoda aur left se
+        whileInView={{ opacity: 1, x: 0 }}
+        viewport={{ once: true, amount: 0.3 }}
+        transition={{ duration: 0.6, ease: "easeOut", delay: 0.1 }}
+        className="mt-16 text-center"
+      >
         <h3 className="text-3xl font-bold text-[#9d7b2f] mb-2">
           Faisal Residencia Map
         </h3>
@@ -79,7 +92,7 @@ export default function FaisalResidenciaLocation() {
             </svg>
           </a>
         </div>
-      </div>
-    </div>
+      </motion.div>
+    </motion.div>
   );
 }

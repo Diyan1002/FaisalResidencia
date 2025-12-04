@@ -1,12 +1,19 @@
 import React from "react";
+import { motion } from "framer-motion";
 import masterPlanImg from "../assets/plan.png"; 
 import plotsImg from "../assets/plot.png"; 
 
 const FaisalMasterPlan = () => {
   return (
     <>
-      {/* ================= MASTER PLAN SECTION ================= */}
-      <section className="w-full bg-white py-12 md:py-16">
+      {/* ================= MASTER PLAN SECTION (LEFT → RIGHT) ================= */}
+      <motion.section
+        initial={{ opacity: 0, x: -80 }}
+        whileInView={{ opacity: 1, x: 0 }}
+        viewport={{ once: true, amount: 0.2 }}
+        transition={{ duration: 1, ease: "easeOut" }}
+        className="w-full bg-white py-12 md:py-16"
+      >
         <div className="max-w-7xl mx-auto px-4 lg:px-0">
           
           <h2 className="text-center text-xl md:text-3xl font-semibold font-poppins text-[#a88843] mb-8 md:mb-10">
@@ -47,10 +54,16 @@ const FaisalMasterPlan = () => {
 
           </div>
         </div>
-      </section>
+      </motion.section>
 
-      {/* ================= PLOTS FOR SALE SECTION ================= */}
-      <section className="w-full bg-white py-12 md:py-16">
+      {/* ================= PLOTS FOR SALE SECTION (BOTTOM → UP) ================= */}
+      <motion.section
+        initial={{ opacity: 0, y: 80 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, amount: 0.2 }}
+        transition={{ duration: 0.7, ease: "easeOut" }}
+        className="w-full bg-white py-12 md:py-16"
+      >
         <div className="max-w-7xl mx-auto px-4 lg:px-0">
 
           <h2 className="text-center text-xl md:text-2xl font-poppins font-semibold text-[#8b6f32] mb-4">
@@ -110,10 +123,16 @@ const FaisalMasterPlan = () => {
 
           </div>
         </div>
-      </section>
+      </motion.section>
 
-      {/* ================= PRICE PLAN GRID SECTION ================= */}
-      <section className="w-full bg-white py-12 md:py-16">
+      {/* ================= PRICE PLAN GRID SECTION (BOTTOM → UP) ================= */}
+      <motion.section
+        initial={{ opacity: 0, y: 80 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, amount: 0.2 }}
+        transition={{ duration: 0.7, ease: "easeOut", delay: 0.1 }}
+        className="w-full bg-white py-12 md:py-16"
+      >
         <div className="max-w-full mx-auto px-4">
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6 font-poppins text-gray-900 lg:-mt-20">
@@ -202,7 +221,7 @@ const FaisalMasterPlan = () => {
           </div>
 
         </div>
-      </section>
+      </motion.section>
     </>
   );
 };

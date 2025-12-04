@@ -1,4 +1,5 @@
 import React from "react";
+import { motion } from "framer-motion";
 import accessibilityImg from "../assets/Acc.png"; // adjust path if needed
 
 const FaisalAccessibility = () => {
@@ -17,7 +18,13 @@ const FaisalAccessibility = () => {
   ];
 
   return (
-    <section className="w-full bg-[#fff9ef] py-12 md:py-16">
+    <motion.section
+      initial={{ opacity: 0, y: -250 }}           // ✅ upar se start
+      whileInView={{ opacity: 1, y: 0 }}         // ✅ niche apni jagah pe aa jaye
+      viewport={{ once: true, amount: 0.2 }}     // ✅ sirf 1 dafa, 20% dikhte hi
+      transition={{ duration: 1, ease: "easeOut" }}
+      className="w-full bg-[#fff9ef] py-12 md:py-16"
+    >
       <div className="max-w-6xl mx-auto px-4 lg:px-6">
         {/* Heading */}
         <h2 className="text-center text-2xl md:text-4xl font-semibold text-[#9d7b2f] tracking-wide mb-4 uppercase">
@@ -64,7 +71,7 @@ const FaisalAccessibility = () => {
           </div>
         </div>
       </div>
-    </section>
+    </motion.section>
   );
 };
 

@@ -1,4 +1,5 @@
 import React from "react";
+import { motion } from "framer-motion";
 import paymentImg from "../assets/Pay.png"; 
 
 const FaisalPaymentPlan = () => {
@@ -61,7 +62,13 @@ const FaisalPaymentPlan = () => {
   ];
 
   return (
-    <section className="w-full bg-[#e5e1d5] py-12 md:py-16">
+    <motion.section
+      initial={{ opacity: 0, y: -70 }}           // ✅ upar se start
+      whileInView={{ opacity: 1, y: 0 }}         // ✅ niche apni jagah pe aa jaye
+      viewport={{ once: true, amount: 0.2 }}     // ✅ sirf 1 dafa, 20% dikhte hi
+      transition={{ duration: 1, ease: "easeOut" }}
+      className="w-full bg-[#e5e1d5] py-12 md:py-16"
+    >
       <div className="max-w-7xl mx-auto px-4 md:px-6 -mt-6 md:-mt-10">
 
         {/* ✅ HEADING */}
@@ -152,7 +159,7 @@ const FaisalPaymentPlan = () => {
         </div>
 
       </div>
-    </section>
+    </motion.section>
   );
 };
 
