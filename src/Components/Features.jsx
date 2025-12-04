@@ -1,5 +1,5 @@
 import React from "react";
-import featuresImg from "../assets/Features.png"; // ✅ adjust path if needed
+import featuresImg from "../assets/features.png"; // ✅ adjust path if needed
 
 const FaisalFeatures = () => {
   const features = [

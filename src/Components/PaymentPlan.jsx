@@ -1,5 +1,5 @@
 import React from "react";
-import paymentImg from "../assets/Pay.png"; // ✅ Adjust path if needed
+import paymentImg from "../assets/Pay.png"; 
 
 const FaisalPaymentPlan = () => {
   const rows = [
