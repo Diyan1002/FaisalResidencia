@@ -8,7 +8,7 @@ export default function FaisalResidencia() {
       initial={{ opacity: 0, y: -80 }}           // ✅ upar se start
       whileInView={{ opacity: 1, y: 0 }}         // ✅ viewport mein aate hi niche apni jagah pe
       viewport={{ once: true, amount: 0.2 }}     // ✅ sirf 1 dafa, 20% section dikhte hi
-      transition={{ duration: 0.7, ease: "easeOut" }}
+      transition={{ duration: 0.30, ease: "easeOut" }}
       className="w-full py-12 px-4 max-w-7xl mx-auto"
     >
       {/* TITLE */}
