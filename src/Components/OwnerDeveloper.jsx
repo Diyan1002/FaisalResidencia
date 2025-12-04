@@ -5,7 +5,7 @@ import ownerImg from "../assets/Owner.png"; // replace with correct image path
 export default function FaisalResidencia() {
   return (
     <motion.section
-      initial={{ opacity: 0, y: -80 }}           // ✅ upar se start
+      initial={{ opacity: 0, y: -180 }}           // ✅ upar se start
       whileInView={{ opacity: 1, y: 0 }}         // ✅ viewport mein aate hi niche apni jagah pe
       viewport={{ once: true, amount: 0.2 }}     // ✅ sirf 1 dafa, 20% section dikhte hi
       transition={{ duration: 0.30, ease: "easeOut" }}
