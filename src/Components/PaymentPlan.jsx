@@ -63,20 +63,20 @@ const FaisalPaymentPlan = () => {
 
   return (
     <motion.section
-      initial={{ opacity: 0, y: -70 }}           // ✅ upar se start
-      whileInView={{ opacity: 1, y: 0 }}         // ✅ niche apni jagah pe aa jaye
-      viewport={{ once: true, amount: 0.2 }}     // ✅ sirf 1 dafa, 20% dikhte hi
+      initial={{ opacity: 0, y: -70 }}         
+      whileInView={{ opacity: 1, y: 0 }}       
+      viewport={{ once: true, amount: 0.2 }}     
       transition={{ duration: 1, ease: "easeOut" }}
       className="w-full bg-[#e5e1d5] py-12 md:py-16"
     >
       <div className="max-w-7xl mx-auto px-4 md:px-6 -mt-6 md:-mt-10">
 
-        {/* ✅ HEADING */}
+        {/* HEADING */}
         <h2 className="text-center text-2xl md:text-4xl font-semibold text-[#8b6f32] mb-3 md:mb-4">
           Faisal Residencia Payment Plan
         </h2>
 
-        {/* ✅ INTRO */}
+        {/* INTRO */}
         <p className="text-center text-gray-900 max-w-5xl mx-auto leading-relaxed mb-3 md:mb-4 text-sm md:text-lg">
           Faisal Town management introduces a flexible payment plan to provide 
           luxury living at affordable rates. The flexibility in the payment 
@@ -87,7 +87,7 @@ const FaisalPaymentPlan = () => {
           Below is the breakdown of the Faisal Residencia E-17 payment plan:
         </p>
 
-        {/* ✅ TABLE */}
+        {/* TABLE */}
         <div className="w-full overflow-x-auto">
           <table className="min-w-[900px] max-w-6xl border lg:ml-12 border-[#c9b27c] bg-[#fdf6e7] text-xs sm:text-sm md:text-base">
             <thead className="bg-[#f1f1f1] text-[#8b6f32] font-semibold">
@@ -149,7 +149,7 @@ const FaisalPaymentPlan = () => {
           </table>
         </div>
 
-        {/* ✅ IMAGE AT THE END */}
+        {/* IMAGE AT THE END */}
         <div className="mt-10 md:mt-16 flex justify-center">
           <img
             src={paymentImg}

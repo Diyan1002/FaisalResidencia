@@ -5,9 +5,9 @@ import ownerImg from "../assets/Owner.png"; // replace with correct image path
 export default function FaisalResidencia() {
   return (
     <motion.section
-      initial={{ opacity: 0, y: -180 }}           // ✅ upar se start
-      whileInView={{ opacity: 1, y: 0 }}         // ✅ viewport mein aate hi niche apni jagah pe
-      viewport={{ once: true, amount: 0.2 }}     // ✅ sirf 1 dafa, 20% section dikhte hi
+      initial={{ opacity: 0, y: -180 }}        
+      whileInView={{ opacity: 1, y: 0 }}       
+      viewport={{ once: true, amount: 0.2 }}    
       transition={{ duration: 0.30, ease: "easeOut" }}
       className="w-full py-12 px-4 max-w-7xl mx-auto"
     >
@@ -70,9 +70,9 @@ export default function FaisalResidencia() {
       {/* FIRST ROW — SCROLL PAR SEPARATE ANIMATION */}
       <motion.div
         className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 mt-12"
-        initial={{ opacity: 0, y: 40 }}               // ✅ neeche se halka sa
-        whileInView={{ opacity: 1, y: 0 }}            // ✅ apni jagah par aa jaye
-        viewport={{ once: true, amount: 0.3 }}        // ✅ jab ye row viewport mein aaye
+        initial={{ opacity: 0, y: 40 }}             
+        whileInView={{ opacity: 1, y: 0 }}            
+        viewport={{ once: true, amount: 0.3 }}       
         transition={{ duration: 0.6, ease: "easeOut" }}
       >
         {/* CARD 1 */}

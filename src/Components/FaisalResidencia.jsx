@@ -5,8 +5,8 @@ import societyImg from "../assets/Pic1.png"; // adjust path if needed
 export default function FaisalResidencia() {
   return (
     <motion.section
-      initial={{ opacity: 0, y: -350 }}   // ✅ upar se start
-      animate={{ opacity: 1, y: 0 }}     // ✅ apni jagah pe aaye
+      initial={{ opacity: 0, y: -350 }}   
+      animate={{ opacity: 1, y: 0 }}     
       transition={{ duration: 1, ease: "easeOut" }}
       className="bg-[#e5dfd1] py-12 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-20"
     >

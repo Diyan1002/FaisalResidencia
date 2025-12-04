@@ -1,6 +1,6 @@
 import React from "react";
 
-// ✅ IMPORT ICON IMAGES
+// IMPORT ICON IMAGES
 import gated from "../assets/gated.png";
 import road from "../assets/road.png";
 import mosque from "../assets/mosque.png";

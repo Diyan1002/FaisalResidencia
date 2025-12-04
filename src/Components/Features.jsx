@@ -1,5 +1,5 @@
 import React from "react";
-import featuresImg from "../assets/features.png"; // ✅ adjust path if needed
+import featuresImg from "../assets/features.png"; 
 
 const FaisalFeatures = () => {
   const features = [
@@ -16,7 +16,7 @@ const FaisalFeatures = () => {
   return (
     <section className="w-full bg-[#ffffff] py-10">
       <div className="max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-12 items-center">
-        {/* ✅ LEFT IMAGE */}
+        {/* LEFT IMAGE */}
         <div className="flex justify-center md:justify-start">
           <img
             src={featuresImg}
@@ -25,7 +25,7 @@ const FaisalFeatures = () => {
           />
         </div>
 
-        {/* ✅ RIGHT CONTENT */}
+        {/* RIGHT CONTENT */}
         <div>
           <h2 className="text-2xl md:text-3xl font-semibold text-[#8b6f32] mb-4">
             Faisal Residencia Features

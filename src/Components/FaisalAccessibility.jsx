@@ -19,9 +19,9 @@ const FaisalAccessibility = () => {
 
   return (
     <motion.section
-      initial={{ opacity: 0, y: -250 }}           // ✅ upar se start
-      whileInView={{ opacity: 1, y: 0 }}         // ✅ niche apni jagah pe aa jaye
-      viewport={{ once: true, amount: 0.2 }}     // ✅ sirf 1 dafa, 20% dikhte hi
+      initial={{ opacity: 0, y: -250 }}          
+      whileInView={{ opacity: 1, y: 0 }}       
+      viewport={{ once: true, amount: 0.2 }}    
       transition={{ duration: 1, ease: "easeOut" }}
       className="w-full bg-[#fff9ef] py-12 md:py-16"
     >
