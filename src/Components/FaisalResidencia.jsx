@@ -5,7 +5,7 @@ export default function FaisalResidencia() {
   return (
     <section className="bg-[#e5dfd1] py-12 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-20">
       {/* Title */}
-      <h2 className="text-center text-2xl sm:text-3xl lg:text-4xl font-bold text-[#8b6f32] mb-8 sm:mb-10">
+      <h2 className="text-center text-2xl sm:text-3xl lg:text-4xl font-bold text-[#8b6f32] -mt-12 sm:mb-10">
         Faisal Residencia
       </h2>
 
