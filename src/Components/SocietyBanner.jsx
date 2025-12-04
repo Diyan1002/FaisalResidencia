@@ -1,5 +1,5 @@
 import React from "react";
-import banner from "../assets/banner.jpg"; // adjust path if needed
+import banner from "../assets/banner1.jpg"; 
 
 export default function SocietyBanner() {
   return (
