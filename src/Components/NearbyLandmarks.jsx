@@ -79,7 +79,7 @@ const FaisalNearbyLandmarks = () => {
       initial={{ opacity: 0, x: 100 }}           // ✅ right se start
       whileInView={{ opacity: 1, x: 0 }}         // ✅ apni jagah pe aa jaye
       viewport={{ once: true, amount: 0.2 }}     // ✅ sirf 1 dafa animate
-      transition={{ duration: 1, ease: "easeOut" }}
+      transition={{ duration: 0.50, ease: "easeOut" }}
       className="w-full bg-[#e5e1d5] py-16"
     >
       <div className="max-w-6xl mx-auto px-4 -mt-14 lg:px-0">
