@@ -5,10 +5,10 @@ import ownerImg from "../assets/Owner.png"; // replace with correct image path
 export default function FaisalResidencia() {
   return (
     <motion.section
-      initial={{ opacity: 0, y: -180 }}        
+      initial={{ opacity: 0, y: -100 }}        
       whileInView={{ opacity: 1, y: 0 }}       
       viewport={{ once: true, amount: 0.2 }}    
-      transition={{ duration: 0.30, ease: "easeOut" }}
+      transition={{ duration: 0.60, ease: "easeOut" }}
       className="w-full py-12 px-4 max-w-7xl mx-auto overflow-x-hidden sm:overflow-visible"  // ✅ yahan change
     >
       {/* TITLE */}
