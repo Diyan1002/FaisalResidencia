@@ -1,5 +1,4 @@
 import React from "react";
-import { motion } from "framer-motion";
 import nearbyImg from "../assets/Resi.png"; // 👈 path/image name adjust karein
 
 const FaisalNearbyLandmarks = () => {
@@ -75,39 +74,28 @@ const FaisalNearbyLandmarks = () => {
   const secondRow = infoBlocks.slice(4);
 
   return (
-    <motion.section
-      initial={{ opacity: 0, x: 100 }}          
-      whileInView={{ opacity: 1, x: 0 }}         
-      viewport={{ once: true, amount: 0.2 }}    
-      transition={{ duration: 0.50, ease: "easeOut" }}
-      className="w-full bg-[#e5e1d5] py-16"
-    >
-      <div className="max-w-6xl mx-auto px-4 -mt-14 lg:px-0">
-        {/* Heading */}
-        <h2 className="text-center text-3xl md:text-4xl font-semibold text-[#8b6f32] mb-4">
-          Faisal Residencia Nearby Landmarks and Places
-        </h2>
+    <section className="w-full bg-[#e5e1d5] py-12 sm:py-16 overflow-x-hidden sm:overflow-visible">
+      <div className="max-w-6xl mx-auto px-4 lg:px-0">
+        {/* Heading + Intro */}
+        <div>
+          <h2 className="text-center text-2xl sm:text-3xl md:text-4xl font-semibold text-[#8b6f32] mb-4">
+            Faisal Residencia Nearby Landmarks and Places
+          </h2>
 
-        {/* Intro text */}
-        <p className="text-center text-gray-900 font-poppins max-w-6xl mx-auto mb-3 leading-relaxed text-sm md:text-base">
-          Because of its excellent location, the housing society is surrounded
-          by several attractions, landmarks, societies, and places in Rawalpindi
-          and Islamabad. It allows residents to reach the key destinations in
-          the Twin Cities.
-        </p>
+          <p className="text-center text-gray-900 font-poppins max-w-6xl mx-auto mb-3 leading-relaxed text-sm md:text-base">
+            Because of its excellent location, the housing society is surrounded
+            by several attractions, landmarks, societies, and places in Rawalpindi
+            and Islamabad. It allows residents to reach the key destinations in
+            the Twin Cities.
+          </p>
 
-        <p className="text-center text-gray-900 font-poppins max-w-6xl mx-auto mb-10 text-sm md:text-base">
-          Among the notable attractions and landmarks near the society are:
-        </p>
+          <p className="text-center text-gray-900 font-poppins max-w-6xl mx-auto mb-8 sm:mb-10 text-sm md:text-base">
+            Among the notable attractions and landmarks near the society are:
+          </p>
+        </div>
 
         {/* Content row (list + image) */}
-        <motion.div
-          initial={{ opacity: 0, y: 40 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.3 }}
-          transition={{ duration: 0.6, ease: "easeOut" }}
-          className="flex flex-col lg:flex-row ml-0 lg:ml-8 items-start gap-8"
-        >
+        <div className="flex flex-col lg:flex-row ml-0 lg:ml-2 items-start gap-8">
           {/* Left: bullet list */}
           <ul className="flex-1 space-y-2">
             {points.map((item, index) => (
@@ -123,7 +111,7 @@ const FaisalNearbyLandmarks = () => {
 
           {/* Right: image */}
           <div className="flex-1 flex justify-center">
-            <div className="w-full max-w-md lg:max-w-lg mt-6 lg:mt-10">
+            <div className="w-full max-w-sm sm:max-w-md lg:max-w-lg mt-4 sm:mt-6 lg:mt-8">
               <img
                 src={nearbyImg}
                 alt="Faisal Residencia nearby landmarks and places"
@@ -131,16 +119,10 @@ const FaisalNearbyLandmarks = () => {
               />
             </div>
           </div>
-        </motion.div>
+        </div>
 
-        {/* FIRST ROW — 4 COLUMNS (left → right) */}
-        <motion.div
-          initial={{ opacity: 0, x: -60 }}           
-          whileInView={{ opacity: 1, x: 0 }}         
-          viewport={{ once: true, amount: 0.3 }}
-          transition={{ duration: 0.6, ease: "easeOut", delay: 0.05 }}
-          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 mt-12"
-        >
+        {/* FIRST ROW — 4 COLUMNS */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 mt-10 sm:mt-12">
           {firstRow.map((item, index) => (
             <div
               key={index}
@@ -158,16 +140,10 @@ const FaisalNearbyLandmarks = () => {
               </p>
             </div>
           ))}
-        </motion.div>
+        </div>
 
-        {/* SECOND ROW — 4 COLUMNS (left → right) */}
-        <motion.div
-          initial={{ opacity: 0, x: -60 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          viewport={{ once: true, amount: 0.3 }}
-          transition={{ duration: 0.6, ease: "easeOut", delay: 0.08 }}
-          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 mt-4"
-        >
+        {/* SECOND ROW — 4 COLUMNS */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 mt-4">
           {secondRow.map((item, index) => (
             <div
               key={index}
@@ -185,16 +161,10 @@ const FaisalNearbyLandmarks = () => {
               </p>
             </div>
           ))}
-        </motion.div>
+        </div>
 
-        {/* THIRD ROW — 4 COLUMNS (left → right) */}
-        <motion.div
-          initial={{ opacity: 0, x: -60 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          viewport={{ once: true, amount: 0.3 }}
-          transition={{ duration: 0.6, ease: "easeOut", delay: 0.11 }}
-          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 mt-4"
-        >
+        {/* THIRD ROW — 4 COLUMNS */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 mt-4">
           {thirdRow.map((item, index) => (
             <div
               key={index}
@@ -212,9 +182,9 @@ const FaisalNearbyLandmarks = () => {
               </p>
             </div>
           ))}
-        </motion.div>
+        </div>
       </div>
-    </motion.section>
+    </section>
   );
 };
 

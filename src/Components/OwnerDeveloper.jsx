@@ -9,7 +9,7 @@ export default function FaisalResidencia() {
       whileInView={{ opacity: 1, y: 0 }}       
       viewport={{ once: true, amount: 0.2 }}    
       transition={{ duration: 0.30, ease: "easeOut" }}
-      className="w-full py-12 px-4 max-w-7xl mx-auto"
+      className="w-full py-12 px-4 max-w-7xl mx-auto overflow-x-hidden sm:overflow-visible"  // ✅ yahan change
     >
       {/* TITLE */}
       <h2 className="text-center text-2xl md:text-3xl font-bold text-[#8b6f32] mb-6">
